@@ -24,6 +24,7 @@ const greetingSlice = createSlice({
       .addCase(getRandomGreeting.fulfilled, (state, action) => ({
         ...state,
         greeting: action.payload,
+        error: '',
       }))
       .addCase(getRandomGreeting.rejected, (state, action) => ({
         ...state,
