@@ -18,6 +18,7 @@ code {
   gap: 1rem;
   margin-top: 2rem;
   align-items: center;
+  text-align: center;
 }
 
 button {
