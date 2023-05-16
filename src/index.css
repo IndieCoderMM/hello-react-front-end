@@ -8,7 +8,12 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
 
@@ -43,4 +48,3 @@ button {
 button:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
-

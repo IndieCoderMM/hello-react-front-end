@@ -17,7 +17,7 @@ function Greeting() {
       <h1>Random Greeting</h1>
       <h2>{greeting}</h2>
       <Link to="/">
-        <button>Back to Home</button>
+        <button type="button">Back to Home</button>
       </Link>
       <small>{error}</small>
     </section>

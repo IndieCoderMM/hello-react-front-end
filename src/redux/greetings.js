@@ -5,7 +5,7 @@ const API_URL = 'http://127.0.0.1:3000';
 export const getRandomGreeting = createAsyncThunk(
   'greetings/random',
   async () => {
-    const res = await fetch(API_URL + '/random_greeting');
+    const res = await fetch(`${API_URL}/random_greeting`);
     const data = await res.json();
     return data.greeting;
   },
@@ -21,12 +21,14 @@ const greetingSlice = createSlice({
   initialState,
   extraReducers(builder) {
     builder
-      .addCase(getRandomGreeting.fulfilled, (state, action) => {
-        state.greeting = action.payload;
-      })
-      .addCase(getRandomGreeting.rejected, (state, action) => {
-        state.error = action.error.message;
-      });
+      .addCase(getRandomGreeting.fulfilled, (state, action) => ({
+        ...state,
+        greeting: action.payload,
+      }))
+      .addCase(getRandomGreeting.rejected, (state, action) => ({
+        ...state,
+        error: action.error.message,
+      }));
   },
 });
 
